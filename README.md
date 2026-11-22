@@ -1,47 +1,48 @@
-# SpringBoot Employee Management System
+# Employee Management System
 
-The SpringBoot Employee Management System is a web-based application built using Spring Boot, Spring Data JPA, Thymeleaf, Maven and MySQL. It provides functionalities to manage employee records, including listing, adding, updating, getting, and deleting employees.
+A server-rendered employee management application built with **Java, Spring Boot, Spring Data JPA, Thymeleaf, Maven, and MySQL**.
 
-## Table of Contents
-
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Accessing the Application](#accessing-the-application)
-- [Configuration](#configuration)
-  
 ## Features
 
-- List all employees: View a list of all employees with their basic information.
-- Add employee: Add a new employee by providing necessary details.
-- Update employee: Edit the information of an existing employee.
-- Get employee details: Retrieve detailed information about a specific employee.
-- Delete employee: Remove an employee from the system.
+- View the employee list.
+- Add and update employee records.
+- View an individual employee's details.
+- Delete employee records.
 
-## Getting Started
+## Technology
+
+| Area | Tools |
+|---|---|
+| Backend | Java, Spring Boot |
+| Persistence | Spring Data JPA |
+| UI | Thymeleaf |
+| Database | MySQL |
+| Build | Maven |
+
+## Run locally
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
-
-- Java Development Kit (JDK) 8 or higher
+- JDK 8 or later (use the version supported by the project configuration)
 - Maven
-- A modern web browser
-- MySQL Server
+- MySQL
 
-### Installation
+### Setup
 
-1. Clone the repository.
-2. Build the project using maven.
-3. Run the application.
+1. Clone the repository and open the project directory.
+2. Create a MySQL database for the application.
+3. Update the datasource URL, username, and password in `src/main/resources/application.properties`.
+4. Build and start the application:
 
-## Accessing the application
+```bash
+mvn clean install
+mvn spring-boot:run
+```
 
-Once the application is up and running, you can access it through a web browser by navigating to:
-http://localhost:8080
+5. Open [http://localhost:8080](http://localhost:8080).
 
+> Keep database credentials outside source control. Do not commit personal credentials or production connection strings.
 
-## Configuration
+## Project notes
 
-The application's configuration can be found in the src/main/resources/application.properties file. One can modify database settings, server port, and other properties according to their preferences.
+This is a learning project demonstrating a conventional Spring Boot application with server-rendered views and relational persistence.
